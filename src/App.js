@@ -5,6 +5,7 @@ import injectTapEventPlugin from 'react-tap-event-plugin';
 // http://stackoverflow.com/a/34015469/988941
 injectTapEventPlugin();
 import Header from './Header';
+import Content from './Content';
 import Fingerprint2 from 'fingerprintjs2';
 import io from 'socket.io-client';
 import server from './server'
@@ -27,7 +28,10 @@ class App extends Component {
   render() {
     return (
       <MuiThemeProvider>
-        <Header title='众创' />
+        <div>
+          <Header title='众创' />
+          <Content />
+        </div>
       </MuiThemeProvider>
     );
   }
