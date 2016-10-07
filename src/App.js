@@ -18,11 +18,12 @@ class App extends Component {
     var socket = io(server.addr)
     new Fingerprint2().get(fp => {
       socket.on('connect', () => {
-        socket.emit('user.connect', { fp }, (err, role, works) => {
-          console.log(err, role, works)
+        socket.emit('user.connect', { fp }, (err, user) => {
+          console.log('user.connect', err, user)
         })
       })
     });
+    socket.on('user.set', user => console.log('user.set', user))
   }
 
   render() {

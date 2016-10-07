@@ -36,7 +36,6 @@ class Header extends Component {
                 <ToolbarTitle text='众创' style={{ color: 'white' }} />
                 <ToolbarGroup>
                     <DropDownMenu value={1}
-                        openImmediately={true}
                         onChange={(...a) => this.onRoleChange(...a) }
                         labelStyle={{ color: 'white' }}
                         iconStyle={{ display: 'none' }}
